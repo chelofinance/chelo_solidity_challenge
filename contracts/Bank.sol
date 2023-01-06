@@ -101,11 +101,13 @@ contract Bank is IBank {
         return balance;
     }
 
+    //TODO allow only the role FEE_RECEIVER_ROLE to change the bank fee receiver
     /// @notice Set the fee that the bank takes
     /// @param feeReceiver new fee receiver
     function setBankFeeReceiver(address feeReceiver) external returns (address) {
         return address(0);
     }
 
+    //TODO allow only the role WHITELISTER_ROLE to whitelist depositors
     function whitelistDepositor(address depositor) external {}
 }
